@@ -5,6 +5,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
+-- TODO: Проверка орфографии
+
 -- TODO: debugger (dap)
 -- TODO: search (telescope)
 -- TODO: refactor
@@ -68,19 +70,8 @@ return require('packer').startup(function(use)
       require('mason-lspconfig').setup()
     end
   }
-  -- use {
-  --   'jose-elias-alvarez/null-ls.nvim',
-  --   config = function()
-  --     require('plugins.null-ls')
-  --   end
-  -- }
-  -- use {
-  --   'MunifTanjim/prettier.nvim',
-  --   config = function()
-  --     require('plugins.prettier')
-  --   end
-  -- }
 
+  -- Форматирование кода (Prettier и т.д.)
   use 'sbdchd/neoformat'
 
   -- Theme
@@ -116,14 +107,14 @@ return require('packer').startup(function(use)
     end
   }
 
-    -- Подсветка синтаксиса
-    use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate',
-      config = function()
-        require('plugins.treesitter') 
-      end
-    }
+  -- Подсветка синтаксиса
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function()
+      require('plugins.treesitter') 
+    end
+  }
 
   -- File explorer
   use {

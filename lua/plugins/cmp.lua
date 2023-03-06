@@ -39,15 +39,7 @@ cmp.setup({
     { name = 'nvim_lsp_signature_help' },
     { name = 'cmp_tabnine' },
     { name = 'luasnip' },
-    {
-      name = 'spell',
-      option = {
-        keep_all_entries = false,
-        enable_in_context = function()
-          return require('cmp.config.context').in_treesitter_capture('spell')
-        end,
-      },
-    },
+    { name = 'spell' },
   },
   completion = {
     keyword_length = 1,

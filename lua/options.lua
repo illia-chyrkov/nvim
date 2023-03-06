@@ -60,7 +60,7 @@ vim.cmd('highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4')
 -- Gutter icons
 local signs = {
   Error = " ",
-  Warning = " ",
+  Warn = " ",
   Hint = " ",
   Information = " "
 }
@@ -73,7 +73,7 @@ end
 vim.wo.fillchars='eob: '
 
 -- Spell checking
-vim.opt.spell = true
+-- vim.opt.spell = true
 vim.opt.spelllang = { 'en_us', 'ru_ru', 'uk' }
 
 -- Хоткеи на ру расскладке
