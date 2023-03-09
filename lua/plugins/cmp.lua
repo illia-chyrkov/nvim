@@ -29,15 +29,15 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
   }),
   sources = {
-    { name = 'nvim_lsp' }, -- For nvim-lsp
+    -- { name = 'nvim_lsp' }, -- For nvim-lsp
     -- { name = 'ultisnips' }, -- For ultisnips user.
     -- { name = 'nvim_lua' }, -- for nvim lua function
     { name = 'path' }, -- for path completion
     -- { name = 'buffer', keyword_length = 4 }, -- for buffer word completion
     -- { name = 'omni' },
     -- { name = 'emoji', insert = true, }, -- emoji completion
-    { name = 'nvim_lsp_signature_help' },
-    { name = 'cmp_tabnine' },
+    -- { name = 'nvim_lsp_signature_help' },
+    -- { name = 'cmp_tabnine' },
     { name = 'luasnip' },
     { name = 'spell' },
   },

@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
 
   -- Git подсказки
   use 'APZelos/blamer.nvim'
-  use 'kdheepak/lazygit.nvim'
+  -- use 'kdheepak/lazygit.nvim'
 
   -- Colors
   use {
@@ -56,23 +56,23 @@ return require('packer').startup(function(use)
   }
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'lvimuser/lsp-inlayhints.nvim'
-  use {
-    'williamboman/mason.nvim',
-    config = function()
-      require('plugins.mason')
-    end
-  }
-  use {
-    'williamboman/mason-lspconfig.nvim',
-    config = function()
-      require('mason-lspconfig').setup()
-    end
-  }
+  -- use 'neovim/nvim-lspconfig'
+  -- use 'lvimuser/lsp-inlayhints.nvim'
+  -- use {
+  --   'williamboman/mason.nvim',
+  --   config = function()
+  --     require('plugins.mason')
+  --   end
+  -- }
+  -- use {
+  --   'williamboman/mason-lspconfig.nvim',
+  --   config = function()
+  --     require('mason-lspconfig').setup()
+  --   end
+  -- }
 
   -- Форматирование кода (Prettier и т.д.)
-  use 'sbdchd/neoformat'
+  -- use 'sbdchd/neoformat'
 
   -- Theme
   use 'shaunsingh/nord.nvim'
@@ -89,7 +89,7 @@ return require('packer').startup(function(use)
   use {'stevearc/dressing.nvim'}
 
   -- Autocomplete
-  use 'hrsh7th/cmp-nvim-lsp'
+  -- use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use {
@@ -98,6 +98,18 @@ return require('packer').startup(function(use)
       require('plugins.cmp')
     end
   }
+
+  -- Tabnine
+  -- use {
+  --   'tzachar/cmp-tabnine',
+  --   after = "nvim-cmp",
+  --   run='powershell ./install.ps1',
+  --   -- run='./install.sh'
+  --   requires = 'hrsh7th/nvim-cmp'
+  -- }
+
+  -- This tiny plugin adds vscode-like pictograms to neovim built-in lsp
+  use('onsails/lspkind-nvim')
 
   -- Иконки
   use {
@@ -127,18 +139,6 @@ return require('packer').startup(function(use)
       require('plugins.tree')
     end
   }
-
-  -- Tabnine
-  use {
-    'tzachar/cmp-tabnine',
-    after = "nvim-cmp",
-    run='powershell ./install.ps1',
-    -- run='./install.sh'
-    requires = 'hrsh7th/nvim-cmp'
-  }
-
-  -- This tiny plugin adds vscode-like pictograms to neovim built-in lsp
-  use('onsails/lspkind-nvim')
 
   -- Нижняя строка состояния
   use {
