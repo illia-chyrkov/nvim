@@ -75,7 +75,8 @@ return require('packer').startup(function(use)
   -- use 'sbdchd/neoformat'
 
   -- Theme
-  use 'shaunsingh/nord.nvim'
+  -- use 'shaunsingh/nord.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- Smooth scrolling
   use {

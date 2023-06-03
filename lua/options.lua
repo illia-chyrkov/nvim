@@ -36,14 +36,20 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Настройки темы
-vim.cmd[[colorscheme nord]]
-vim.g.nord_contrast = false
-vim.g.nord_borders = true
-vim.g.nord_disable_background = true
-vim.g.nord_italic = true
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = true
-require('nord').set()
+-- vim.cmd[[colorscheme nord]]
+-- vim.g.nord_contrast = false
+-- vim.g.nord_borders = true
+-- vim.g.nord_disable_background = true
+-- vim.g.nord_italic = true
+-- vim.g.nord_uniform_diff_background = true
+-- vim.g.nord_bold = true
+-- require('nord').set()
+
+require("tokyonight").setup({
+  style = "night",
+  transparent = true,
+})
+vim.cmd[[colorscheme tokyonight-night]]
 
 -- CMP colors
 vim.cmd('syntax on')
